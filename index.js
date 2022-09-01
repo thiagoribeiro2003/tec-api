@@ -20,13 +20,13 @@ app.get('/', (req, res)=> {
 });
 
 // Rota (endpoint) para exibir todos os alunos
-app.get('https://apialunos22.herokuapp.com/alunos', (req, res)=> {
+app.get('/alunos', (req, res)=> {
    // res.send("Exibindo TODOS os alunos");
    ler(res);
 });
 
 // Rota (endpoint) para exibir um único aluno
- app.get('/https://apialunos22.herokuapp.comalunos/:id', (req, res)=> {
+ app.get('/alunos/:id', (req, res)=> {
    //  res.send("Exibe os dados de UM aluno");
    const id = req.params.id; // params pega todos os parametros e depois pega oq interessa
    lerUm(id, res);
