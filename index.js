@@ -20,7 +20,7 @@ app.get('/', (req, res)=> {
 });
 
 // Rota (endpoint) para exibir todos os alunos
-app.get('/alunos', (req, res)=> {
+app.get('https://apialunos22.herokuapp.com/alunos', (req, res)=> {
    // res.send("Exibindo TODOS os alunos");
    ler(res);
 });
