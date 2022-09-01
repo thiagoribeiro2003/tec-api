@@ -80,8 +80,20 @@ function atualizar(id, aluno, res){
     });
 }
 
+// EXCLUIR ALUNOS
+function excluir(id, res){
+    const sql = "DELETE FROM alunos WHERE id = ?";
+
+    conexao.query(sql, id, (erro, resultados) =>{
+        if(erro){
+            res.status(400).json(erro.code);
+        } else {
+            res.status(200).json({"status" : "aluno excluido", id});
+        }
+    });
+}
 
 
-export { ler, inserir, lerUm, atualizar };
+export { ler, inserir, lerUm, atualizar, excluir };
 
 
